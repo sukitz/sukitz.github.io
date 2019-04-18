@@ -26,6 +26,10 @@ $(document).ready(function () {
             }
         }
     }).fail(err => {
-
+        if (window.location.pathname.split('/').pop() != "login.html") {
+            location.replace('./login.html')
+        } else {
+            $('body').show()
+        }
     })
 })
