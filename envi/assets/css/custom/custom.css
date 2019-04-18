@@ -1,0 +1,30 @@
+#table_gas_station td {
+    cursor: pointer;
+}
+
+#table_depots td {
+    cursor: pointer;
+}
+
+.modal-lg {
+    max-width: 70% !important;
+}
+
+.col-centered {
+    float: none;
+    margin: 0 auto;
+}
+
+th {
+    text-align: center;
+}
+
+.id {
+    display: none
+}
+
+span.text-small {
+    color: #929090;
+    font-size: 0.8rem;
+    display: block;
+}

@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <link rel="apple-touch-icon" sizes="76x76" href="assets/img/apple-icon.png">
+    <link rel="icon" type="image/png" href="assets/img/favicon.png">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <title>
+        Environmental
+    </title>
+    <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, shrink-to-fit=no' name='viewport' />
+
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.19/css/dataTables.bootstrap4.min.css" />
+    <!--     Fonts and icons     -->
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:400,700|Material+Icons" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css">
+    <!-- CSS Files -->
+    <link href="assets/css/material-dashboard.css?v=2.1.1" rel="stylesheet" />
+    <link href="https://demos.creative-tim.com/test/material-dashboard-pro/assets/css/material-dashboard.min.css?v=2.0.3"
+        rel="stylesheet" />
+    <!-- CSS Just for demo purpose, don't include it in your project -->
+    <link href="assets/demo/demo.css" rel="stylesheet" />
+    <!-- Custom -->
+    <link href="assets/css/custom/jquery.loading-indicator.css" rel="stylesheet" type="text/css" />
+    <link href="assets/css/custom/custom.css" rel="stylesheet" type="text/css" />
+
+</head>
+
+<body style="display: none">
+    <div class="wrapper ">
+        <div class="sidebar" data-color="danger" data-background-color="white" data-image="assets/img/sidebar-1.jpg">
+            <!--
+        Tip 1: You can change the color of the sidebar using: data-color="purple | azure | green | orange | danger"
+
+        Tip 2: you can also add an image using data-image tag
+    -->
+            <div class="logo">
+                <a href="#" class="simple-text logo-normal">
+                    Environmental
+                </a>
+            </div>
+            <div class="sidebar-wrapper">
+                <ul class="nav">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#">
+                            <i class="material-icons">dashboard</i>
+                            <p>HOME</p>
+                        </a>
+                    </li>
+                    <li class="nav-item ">
+                        <a class="nav-link" href="./add-data.html">
+                            <i class="material-icons">add_circle</i>
+                            <p>ADD DATA</p>
+                        </a>
+                    </li>
+                    <li class="nav-item ">
+                        <a class="nav-link" href="./standard.html">
+                            <i class="material-icons">list</i>
+                            <p>STANDARD</p>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="main-panel">
+            <!-- Navbar -->
+            <nav class="navbar navbar-expand-lg navbar-transparent navbar-absolute fixed-top ">
+                <div class="container-fluid">
+                    <div class="navbar-wrapper">
+                        <a class="navbar-brand" href="#pablo">Dashboard</a>
+                    </div>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" aria-controls="navigation-index"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="navbar-toggler-icon icon-bar"></span>
+                        <span class="navbar-toggler-icon icon-bar"></span>
+                        <span class="navbar-toggler-icon icon-bar"></span>
+                    </button>
+                    <div class="collapse navbar-collapse justify-content-end">
+                        <form class="navbar-form">
+                            <div class="input-group no-border">
+                                <input type="text" value="" class="form-control" placeholder="Search...">
+                                <button type="submit" class="btn btn-white btn-round btn-just-icon">
+                                    <i class="material-icons">search</i>
+                                    <div class="ripple-container"></div>
+                                </button>
+                            </div>
+                        </form>
+                        <ul class="navbar-nav">
+                            <li class="nav-item dropdown">
+                                <a class="nav-link" href="#pablo" id="navbarDropdownProfile" data-toggle="dropdown"
+                                    aria-haspopup="true" aria-expanded="false">
+                                    <i class="material-icons">person</i>
+                                    <p class="d-lg-none d-md-block">
+                                        Account
+                                    </p>
+                                </a>
+                                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownProfile">
+                                    <a class="dropdown-item" href="#" id="logout">Log out</a>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+            <!-- End Navbar -->
+            <div class="content">
+                <div class="container-fluid">
+                    <div class="row">
+
+                        <div class="col-lg-6 col-md-6 col-sm-6">
+                            <div class="card card-stats">
+                                <div class="card-header card-header-warning card-header-icon">
+                                    <div class="card-icon">
+                                        <i class="material-icons">location_city</i>
+                                    </div>
+                                    <p class="card-category">Depots</p>
+                                    <h3 class="card-title" id="num_depots">0</h3>
+                                </div>
+                                <div class="card-footer">
+                                    <div class="stats">
+                                        <i class="material-icons">update</i> Just minute ago
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-6 col-md-6 col-sm-6">
+                            <div class="card card-stats">
+                                <div class="card-header card-header-danger card-header-icon">
+                                    <div class="card-icon">
+                                        <i class="material-icons">local_gas_station</i>
+                                    </div>
+                                    <p class="card-category">Gas Station</p>
+                                    <h3 class="card-title" id="num_gas_station">0</h3>
+                                </div>
+                                <div class="card-footer">
+                                    <div class="stats">
+                                        <i class="material-icons">update</i> Just minute ago
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="card">
+                                <div class="card-header card-header-warning">
+                                    <h4 class="card-title ">Depots</h4>
+                                    <!-- <p class="card-category"> Here is a subtitle for this table</p> -->
+                                </div>
+                                <div class="card-body">
+                                    <div class="table-responsive">
+                                        <table class="table table-hover table-striped table-bordered" id="table_depots">
+                                            <thead class="text-primary ">
+                                                <th width="8%">Depot ID</th>
+                                                <th>Depot Name</th>
+                                                <th width="15%">mE</th>
+                                                <th width="15%">mN</th>
+                                                <th width="17%">Zone</th>
+                                                <th width="10%">Actions</th>
+                                            </thead>
+                                            <tbody>
+                                            </tbody>
+                                            <tfoot>
+                                            </tfoot>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="card">
+                                <div class="card-header card-header-danger">
+                                    <h4 class="card-title ">Gas Station</h4>
+                                </div>
+                                <div class="card-body">
+                                    <div class="table-responsive">
+                                        <table class="table table-hover table-striped table-bordered" id="table_gas_station">
+                                            <thead class="text-primary ">
+                                                <th width="15%">Gas Station ID</th>
+                                                <th>Gas Station Name</th>
+                                                <th width="15%">mE</th>
+                                                <th width="15%">mN</th>
+                                                <th width="15%">Zone</th>
+                                                <th width="10%">Actions</th>
+                                            </thead>
+                                            <tbody>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal fade" id="modal" tabindex="-1" role="dialog" aria-labelledby="modal_title"
+                        aria-hidden="true">
+                        <div class="modal-dialog  modal-lg modal-dialog-centered" role="document">
+                            <div class="modal-content ">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="modal_title"></h5>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+                                <div class="modal-body">
+                                    <div class="row" id="accordion">
+                                        <div class="col-md-12">
+                                            <div class="card mb-0">
+                                                <a data-toggle="collapse" href="#parameter" aria-expanded="false" class="text-dark">
+                                                    <div class="card-header " id="parameter_title">
+                                                        <h4>Air quality and Meteorological</h4>
+                                                    </div>
+                                                </a>
+                                                <div id="parameter" class="collapse" aria-labelledby="parameter_title"
+                                                    data-parent="#accordion">
+                                                    <div class="card-body">
+                                                        <div class="table-responsive">
+                                                            <table class="table table-striped table-hover table-bordered table-bordered"
+                                                                id="parameter_table">
+                                                                <thead>
+                                                                    <tr>
+                                                                        <th width="12%">Date</th>
+                                                                        <th width="6%">CO <span class="text-small">(PPM)</span></th>
+                                                                        <th width="6%">NO<sub>2</sub> <span class="text-small">(PPM)</span></th>
+                                                                        <th width="6%">SO<sub>2</sub> <span class="text-small">(PPM)</span></th>
+                                                                        <th width="6%">TSP <span class="text-small">(PPM)</span></th>
+                                                                        <th width="6%">PM<sub>10</sub> <span class="text-small">(mg/m<sup>3</sup>)</span></th>
+                                                                        <th width="6%">PM<sub>2.5</sub> <span class="text-small">(mg/m<sup>3</sup>)</span></th>
+                                                                        <th width="6%">O<sub>3</sub> <span class="text-small">(mg/m<sup>3</sup>)</span></th>
+                                                                        <th width="6%">Pb <span class="text-small">(mg/m<sup>3</sup>)</span></th>
+                                                                        <th width="6%">WS <span class="text-small">(mps)</span></th>
+                                                                        <th width="6%">WD <span class="text-small">(Deg)</span></th>
+                                                                        <th width="6%">AT <span class="text-small">(&deg;C)</span></th>
+                                                                        <th width="6%">RH <span class="text-small">(%)</span></th>
+                                                                        <th width="6%">BP <span class="text-small">(mmHg)</span></th>
+                                                                        <th width="10%">Actions</th>
+                                                                    </tr>
+
+                                                                </thead>
+
+                                                            </table>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-md-12">
+                                            <div class="card mb-0">
+                                                <a data-toggle="collapse" href="#noise" aria-expanded="false" class="text-dark">
+                                                    <div class="card-header" id="noise_title">
+                                                        <h4>Noise</h4>
+                                                    </div>
+                                                </a>
+                                                <div id="noise" class="collapse" aria-labelledby="noise_title"
+                                                    data-parent="#accordion">
+                                                    <div class="card-body">
+                                                        <div class="table-responsive">
+                                                            <table class="table table-striped table-hover table-bordered"
+                                                                id="noise_table">
+                                                                <thead>
+                                                                    <th width="20%">Year</th>
+                                                                    <th width="35%">Sampling Point</th>
+                                                                    <th width="15%">L<sub>eq</sub></th>
+                                                                    <th width="15%">L<sub>max</sub></th>
+                                                                    <th width="15%">Actions</th>
+                                                                </thead>
+                                                            </table>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                        <div class="col-md-12">
+                                            <div class="card mb-0">
+                                                <a data-toggle="collapse" href="#light" aria-expanded="false" class="text-dark">
+                                                    <div class="card-header" id="light_title">
+                                                        <h4>Light</h4>
+                                                    </div>
+                                                </a>
+                                                <div id="light" class="collapse" aria-labelledby="light_title"
+                                                    data-parent="#accordion">
+                                                    <div class="card-body">
+                                                        <div class="table-responsive">
+                                                            <table class="table table-striped table-hover table-bordered"
+                                                                id="light_table">
+                                                                <thead>
+                                                                    <th width="20%">Year</th>
+                                                                    <th width="40%">Sampling Point</th>
+                                                                    <th width="20%">lux</th>
+                                                                    <th width="20%">Actions</th>
+                                                                </thead>
+                                                            </table>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-12">
+
+                                            <div class="card mb-0">
+                                                <a data-toggle="collapse" href="#water" aria-expanded="false" class="text-dark">
+                                                    <div class="card-header" id="water_title">
+                                                        <h4>Water</h4>
+                                                    </div>
+                                                </a>
+                                                <div id="water" class="collapse" aria-labelledby="water_title"
+                                                    data-parent="#accordion">
+                                                    <div class="card-body">
+                                                        <div class="table-responsive">
+                                                            <table class="table table-striped table-hover table-bordered"
+                                                                id="water_table">
+                                                                <thead>
+                                                                    <th width="10%">Year</th>
+                                                                    <th width="10%">pH</th>
+                                                                    <th width="15%">COD <span class="text-small">(mg/L)</span></th>
+                                                                    <th width="15%">TSS <span class="text-small">(mg/L)</span></th>
+                                                                    <th width="15%">FOG <span class="text-small">(mg/L)</span></th>
+                                                                    <th width="15%">BOD <span class="text-small">(mg/L)</span></th>
+                                                                    <th width="15%">DO <span class="text-small">(mg/L)</span></th>
+                                                                    <th width="5%">Actions</th>
+                                                                </thead>
+                                                            </table>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <footer class="footer">
+                <div class="container-fluid">
+                    <nav class="float-left">
+                        <ul>
+                            <li>
+                                <a href="https://www.creative-tim.com">
+                                    Creative Tim
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://creative-tim.com/presentation">
+                                    About Us
+                                </a>
+                            </li>
+                            <li>
+                                <a href="http://blog.creative-tim.com">
+                                    Blog
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://www.creative-tim.com/license">
+                                    Licenses
+                                </a>
+                            </li>
+                        </ul>
+                    </nav>
+                    <div class="copyright float-right">
+                        &copy;
+                        <script>
+                            document.write(new Date().getFullYear())
+                        </script>, made with <i class="material-icons">favorite</i> by
+                        <a href="https://www.creative-tim.com" target="_blank">Creative Tim</a> for a better web.
+                    </div>
+                </div>
+            </footer>
+        </div>
+    </div>
+
+
+    <!--   Core JS Files   -->
+    <script src="assets/js/core/jquery.min.js"></script>
+    <script src="assets/js/core/popper.min.js"></script>
+    <script src="assets/js/core/bootstrap-material-design.min.js"></script>
+    <script src="assets/js/plugins/perfect-scrollbar.jquery.min.js"></script>
+    <!-- Plugin for the momentJs  -->
+    <script src="assets/js/plugins/moment.min.js"></script>
+    <!--  Plugin for Sweet Alert -->
+    <script src="assets/js/plugins/sweetalert2.js"></script>
+    <!-- Forms Validations Plugin -->
+    <script src="assets/js/plugins/jquery.validate.min.js"></script>
+    <!-- Plugin for the Wizard, full documentation here: https://github.com/VinceG/twitter-bootstrap-wizard -->
+    <script src="assets/js/plugins/jquery.bootstrap-wizard.js"></script>
+    <!--	Plugin for Select, full documentation here: http://silviomoreto.github.io/bootstrap-select -->
+    <script src="assets/js/plugins/bootstrap-selectpicker.js"></script>
+    <!--  Plugin for the DateTimePicker, full documentation here: https://eonasdan.github.io/bootstrap-datetimepicker/ -->
+    <script src="assets/js/plugins/bootstrap-datetimepicker.min.js"></script>
+    <!--  DataTables.net Plugin, full documentation here: https://datatables.net/  -->
+    <script src="assets/js/plugins/jquery.dataTables.min.js"></script>
+    <!--	Plugin for Tags, full documentation here: https://github.com/bootstrap-tagsinput/bootstrap-tagsinputs  -->
+    <script src="assets/js/plugins/bootstrap-tagsinput.js"></script>
+    <!-- Plugin for Fileupload, full documentation here: http://www.jasny.net/bootstrap/javascript/#fileinput -->
+    <script src="assets/js/plugins/jasny-bootstrap.min.js"></script>
+    <!--  Full Calendar Plugin, full documentation here: https://github.com/fullcalendar/fullcalendar    -->
+    <script src="assets/js/plugins/fullcalendar.min.js"></script>
+    <!-- Vector Map plugin, full documentation here: http://jvectormap.com/documentation/ -->
+    <script src="assets/js/plugins/jquery-jvectormap.js"></script>
+    <!--  Plugin for the Sliders, full documentation here: http://refreshless.com/nouislider/ -->
+    <script src="assets/js/plugins/nouislider.min.js"></script>
+    <!-- Include a polyfill for ES6 Promises (optional) for IE11, UC Browser and Android browser support SweetAlert -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/core-js/2.4.1/core.js"></script>
+    <!-- Library for adding dinamically elements -->
+    <script src="assets/js/plugins/arrive.min.js"></script>
+
+    <!-- Control Center for Material Dashboard: parallax effects, scripts for the example pages etc -->
+    <script src="assets/js/material-dashboard.js?v=2.1.1" type="text/javascript"></script>
+    <!-- Custom -->
+    <script src="assets/js/custom/jquery.loading-indicator.min.js"></script>
+    <script>
+        $('#table_depots').loadingIndicator({ "showOnInit": true });
+        var loader_table_depots = $("#table_depots").data("loadingIndicator");
+
+        $('#table_gas_station').loadingIndicator({ "showOnInit": true });
+        var loader_table_gas_station = $("#table_gas_station").data("loadingIndicator");
+    </script>
+    <script src="assets/js/custom/role.js"></script>
+    <script src="assets/js/custom/fetch-data.js?v=2"></script>
+    <script>
+        $(document).ready(function () {
+            $().ready(function () {
+                window_width = $(window).width();
+
+                fixed_plugin_open = $('.sidebar .sidebar-wrapper .nav li.active a p').html();
+
+                if (window_width > 767 && fixed_plugin_open == 'Dashboard') {
+                    if ($('.fixed-plugin .dropdown').hasClass('show-dropdown')) {
+                        $('.fixed-plugin .dropdown').addClass('open');
+                    }
+                }
+
+            });
+        });
+    </script>
+    <script>
+        $(document).ready(function () {
+            // Javascript method's body can be found assets/js/demos.js
+            getDepots()
+            getGasStation()
+
+            $('#modal').on('hidden.bs.modal', function (e) {
+                resetModal()
+            })
+            $('#modal').on('show.bs.modal', function (e) {
+                $('.main-panel').perfectScrollbar('destroy');
+                // $('#modal a[aria-expanded=true]').trigger('click');
+            })
+
+            $('#parameter').on('show.bs.collapse', function () {
+                $('#parameter_title').addClass('card-header-warning')
+            })
+
+            $('#parameter').on('hide.bs.collapse', function () {
+                $('#parameter_title').removeClass('card-header-warning')
+            })
+
+            $('#water').on('show.bs.collapse', function () {
+                $('#water_title').addClass('card-header-info')
+            })
+
+            $('#water').on('hide.bs.collapse', function () {
+                $('#water_title').removeClass('card-header-info')
+            })
+
+            $('#light').on('show.bs.collapse', function () {
+                $('#light_title').addClass('card-header-rose')
+            })
+
+            $('#light').on('hide.bs.collapse', function () {
+                $('#light_title').removeClass('card-header-rose')
+            })
+
+            $('#noise').on('show.bs.collapse', function () {
+                $('#noise_title').addClass('card-header-primary')
+            })
+
+            $('#noise').on('hide.bs.collapse', function () {
+                $('#noise_title').removeClass('card-header-primary')
+            })
+        });
+    </script>
+</body>
+
+</html>
